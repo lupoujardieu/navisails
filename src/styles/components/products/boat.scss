@@ -1,0 +1,86 @@
+@import "@styles/colors";
+
+.boat {
+  padding: 1px;
+
+  img {
+    object-fit: cover;
+    object-position: bottom;
+  }
+
+  .legend {
+    position: absolute;
+    top: 1.5em;
+    left: unset !important;
+    right: 25% !important;
+    height: max-content !important;
+    width: 50% !important;
+
+    font-family: Catamaran, Poppins, sans-serif;
+    font-size: .9em !important;
+    text-transform: uppercase;
+    opacity: 100% !important;
+  }
+}
+
+.flip-card {
+  .flip-card-inner {
+    position: relative;
+    text-align: center;
+    transition: transform 0.7s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card-front, .flip-card-back {
+    position: relative;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+
+  .flip-card-back {
+    top: -100%;
+    background-color: $grey;
+    color: #fff;
+    transform: rotateY(180deg);
+  }
+
+  &:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+
+  * {
+    height: max-content !important;
+  }
+
+  section {
+    width: 70%;
+    line-height: 1.7em;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 1em;
+    }
+
+    .icon {
+      width: 2em !important;
+      height: 2em !important;
+      filter: $orangeFilter;
+    }
+  }
+}

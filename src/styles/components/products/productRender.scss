@@ -1,0 +1,33 @@
+#boats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5em;
+
+  .subsection-title {
+    margin: 3em;
+    line-height: 2em;
+    font-size: clamp(.6rem, 2vw + .3rem, 1.2rem);
+    font-style: italic;
+    text-align: center;
+  }
+
+  .wrapper {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .control-dots {
+    z-index: 1;
+  }
+
+  .slider-wrapper {
+    height: 25em;
+
+    * {
+      height: 100%;
+    }
+  }
+}

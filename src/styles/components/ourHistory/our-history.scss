@@ -1,0 +1,69 @@
+@use "sass:map";
+@import "@styles/colors";
+@import "@styles/responsive";
+
+#our-history {
+  display: flex;
+  flex-direction: column;
+
+  article {
+    margin: 3em;
+
+    &:not(.subsection-title) {
+      h3 {
+        font-family: Catamaran, Poppins, Helvetica, sans-serif;
+        font-size: clamp(1.5rem, 3vw + 1rem, 2rem);
+        margin-bottom: 1em;
+
+        &.end {
+          text-align: end;
+        }
+
+        @media screen and (max-width: map.get($breakpoints, "tablet")) {
+          text-align: start !important;
+        }
+      }
+
+      p {
+        text-align: justify;
+        line-height: 1.7em;
+
+        @media screen and (max-width: map.get($breakpoints, "tablet")) {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: justify;
+        }
+
+        img {
+          width: clamp(15em, 40% + 1em, 30em);
+          height: max-content;
+          aspect-ratio: 4/3;
+          margin: 0 2em 2em 0;
+
+          &.float-left {
+            float: left;
+            margin: 0 2em 2em 0;
+          }
+
+          &.float-right {
+            float: right;
+            margin: 0 0 2em 2em;
+          }
+
+          @media screen and (max-width: map.get($breakpoints, "tablet")) {
+            float: none;
+          }
+        }
+      }
+    }
+
+    &.subsection-title {
+      margin: 3em 4em 6em;
+      line-height: 2em;
+      font-size: clamp(.6rem, 2vw + .3rem, 1.2rem);
+      font-style: italic;
+      text-align: center;
+    }
+  }
+}

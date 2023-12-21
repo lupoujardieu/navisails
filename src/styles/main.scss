@@ -1,0 +1,19 @@
+@use "sass:map";
+@import "@styles/responsive";
+
+.content {
+  margin: 5em 7em;
+
+  @media screen and (max-width: map.get($breakpoints, "tablet")) {
+    margin: 3em 1em;
+  }
+}
+
+h2.big-title {
+  font-family: Catamaran, Poppins, Helvetica, sans-serif;
+  font-size: clamp(1.5rem, 3.5vw + 1rem, 3rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  text-align: center;
+}

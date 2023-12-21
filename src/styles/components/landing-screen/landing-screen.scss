@@ -1,0 +1,103 @@
+@use "sass:map";
+@import "@styles/colors";
+@import "@styles/responsive";
+
+.landingScreen {
+  width: 100%;
+  height: 100vh;
+
+  .overlay {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $fadeColor;
+
+    h1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+
+      color: transparent;
+      -webkit-text-stroke: 3px #fff;
+      font-family: Catamaran, sans-serif;
+      font-size: clamp(1.5rem, 4vw + 1rem, 7rem);
+      font-weight: bold;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin: 0 20px;
+
+      @media(max-width: map.get($breakpoints, "tablet")) {
+        color: #fff;
+        -webkit-text-stroke: unset;
+      }
+
+      img {
+        width: clamp(5rem, 10vw + 1rem, 8rem);
+      }
+    }
+
+    a.draw-border {
+      position: absolute;
+      bottom: 2em;
+    }
+  }
+
+  video {
+    z-index: -99;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .backToTop-btn {
+    $btnWidth: 3em;
+
+    z-index: 99;
+    position: fixed;
+    bottom: 0;
+    width: $btnWidth;
+    height: $btnWidth;
+    margin: 25px;
+
+    border: #fff solid .25em;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+      display: inline-block;
+      height: 0.5em;
+      width: 0.5em;
+
+      border-color: #fff;
+      border-style: solid;
+      border-width: 0.25em 0.25em 0 0;
+    }
+
+    &.hidden{
+      visibility: hidden;
+    }
+
+    &.black {
+      border-color: #000;
+
+      &:before {
+        border-color: #000;
+      }
+    }
+  }
+}
