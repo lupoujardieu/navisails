@@ -6,7 +6,7 @@ C'est un site qui représente une entreprise fictive de fabricant de bateaux
 
 Tout le contenu est libre de droits et générer via des IA.
 
-![https://lupoujardieu.github.io/navisails/](https://lupoujardieu.github.io/navisails/)
+![lien](https://lupoujardieu.github.io/navisails/)
 
 ## Technologies
 
