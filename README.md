@@ -4,7 +4,7 @@ Ce projet a été créé afin d'apprendre les bases de React.
 
 C'est un site qui représente une entreprise fictive de fabricant de bateaux
 
-Tout le contenu est libre de droits et générer via des IA.
+Tout le contenu est libre de droits et généré via des IA.
 
 https://lupoujardieu.github.io/navisails/
 
